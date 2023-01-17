@@ -19,6 +19,10 @@
       "com.blackgear.platform.fabric.PlatformFabric"
     ]
   },
+  "mixins": [
+    "platform.mixins.json",
+    "platform-common.mixins.json"
+  ],
   "depends": {
     "fabric": "*",
     "minecraft": ">=1.19.2"
