@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "platform",
+  "id": "examplemod",
   "version": "${version}",
-  "name": "Platform",
+  "name": "Example Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Me!"
@@ -12,16 +12,16 @@
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
   "license": "Insert License Here",
-  "icon": "assets/platform/icon.png",
+  "icon": "assets/examplemod/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.blackgear.platform.fabric.PlatformFabric"
+      "com.groupid.examplemod.fabric.ExampleModFabric"
     ]
   },
   "mixins": [
-    "platform.mixins.json",
-    "platform-common.mixins.json"
+    "examplemod.mixins.json",
+    "examplemod-common.mixins.json"
   ],
   "depends": {
     "fabric": "*",

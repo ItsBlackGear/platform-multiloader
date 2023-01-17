@@ -4,23 +4,23 @@ loaderVersion = "[43,)"
 license = "Insert License Here"
 
 [[mods]]
-modId = "platform"
+modId = "examplemod"
 version = "${version}"
-displayName = "Platform"
+displayName = "Example Mod"
 authors = "Me!"
 description = '''
 This is an example description! Tell everyone what your mod is about!
 '''
 #logoFile = ""
 
-[[dependencies.platform]]
+[[dependencies.examplemod]]
 modId = "forge"
 mandatory = true
 versionRange = "[43,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.platform]]
+[[dependencies.examplemod]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.19.2,)"
