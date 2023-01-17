@@ -30,7 +30,10 @@ allprojects {
     version = rootProject.mod_version
     group = rootProject.maven_group
 
+    java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
     repositories {
+        maven { url 'https://jitpack.io' }
     }
 
     tasks.withType(JavaCompile) {
