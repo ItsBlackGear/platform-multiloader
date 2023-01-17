@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "platform",
+  "version": "${version}",
+  "name": "Platform",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "Insert License Here",
+  "icon": "assets/platform/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.blackgear.platform.fabric.PlatformFabric"
+    ]
+  },
+  "mixins": [
+    "platform.mixins.json",
+    "platform-common.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.19.2"
+  }
+}
