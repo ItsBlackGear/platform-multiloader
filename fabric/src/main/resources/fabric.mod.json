@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.groupid.examplemod.fabric.ExampleModFabric"
+      "com.groupid.examplemod.core.fabric.ExampleModFabric"
     ]
   },
   "mixins": [
