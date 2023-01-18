@@ -27,7 +27,7 @@ public class EnvironmentImpl {
 
     public static WoodType create(ResourceLocation location) {
         WoodType type = WoodType.register(new WoodTypeBuilder(location));
-        if (Environment.isClientSide()) Sheets.SIGN_MATERIALS.put(type, Sheets.createSignMaterial(type));
+        if (Environment.isClientSide()) Sheets.SIGN_MATERIALS.put(type, Sheets.signTexture(type));
         return type;
     }
 

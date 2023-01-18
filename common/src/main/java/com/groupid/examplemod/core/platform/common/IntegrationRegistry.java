@@ -21,8 +21,8 @@ public class IntegrationRegistry {
     }
 
     public static void strippable(Block source, Block target) {
-        AxeItem.STRIPPABLES = Maps.newHashMap(AxeItem.STRIPPABLES);
-        AxeItem.STRIPPABLES.put(source, target);
+        AxeItem.STRIPABLES = Maps.newHashMap(AxeItem.STRIPABLES);
+        AxeItem.STRIPABLES.put(source, target);
     }
 
     @ExpectPlatform

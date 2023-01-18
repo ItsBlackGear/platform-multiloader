@@ -12,7 +12,6 @@ import net.minecraftforge.fml.loading.FMLLoader;
 
 import java.util.function.Supplier;
 
-@SuppressWarnings("NullableProblems")
 public class EnvironmentImpl {
     public static CreativeModeTab createTab(ResourceLocation location, Supplier<ItemStack> icon) {
         return new CreativeModeTab(location.toString().replace(":", ".")) {

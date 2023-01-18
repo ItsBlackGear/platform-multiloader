@@ -12,8 +12,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Sheets.class)
 public class SheetsMixin {
-    @Inject(method = "createSignMaterial", at = @At("HEAD"), cancellable = true)
-    private static void onCreateSignMaterial(WoodType type, CallbackInfoReturnable<Material> cir) {
+    @Inject(method = "signTexture", at = @At("HEAD"), cancellable = true)
+    private static void onCreateSignTexture(WoodType type, CallbackInfoReturnable<Material> cir) {
         if (type instanceof EnvironmentImpl.WoodTypeBuilder builder) {
             cir.setReturnValue(new Material(Sheets.SIGN_SHEET, new ResourceLocation(builder.getLocation().getNamespace(), "entity/signs/" + builder.getLocation().getPath())));
         }

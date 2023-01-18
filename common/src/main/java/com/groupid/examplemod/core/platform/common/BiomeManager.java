@@ -1,13 +1,13 @@
 package com.groupid.examplemod.core.platform.common;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
-import org.apache.commons.compress.utils.Lists;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiConsumer;
 
 public class BiomeManager {
-    private static final List<BiConsumer<BiomeWriter, BiomeContext>> MODIFICATIONS = Lists.newArrayList();
+    private static final List<BiConsumer<BiomeWriter, BiomeContext>> MODIFICATIONS = new ArrayList<>();
 
     public static final BiomeManager INSTANCE = new BiomeManager();
 

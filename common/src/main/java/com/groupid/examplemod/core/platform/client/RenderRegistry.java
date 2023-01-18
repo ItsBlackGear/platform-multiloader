@@ -3,15 +3,15 @@ package com.groupid.examplemod.core.platform.client;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.color.item.ItemColor;
-import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
+import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class RenderRegistry {
@@ -21,18 +21,8 @@ public class RenderRegistry {
     }
 
     @ExpectPlatform
-    public static <T extends Entity> void renderer(Supplier<? extends EntityType<? extends T>> type, EntityRendererProvider<T> renderer) {
+    public static <T extends Entity> void entity(EntityType<? extends T> type, Function<EntityRenderDispatcher, EntityRenderer<T>> factory) {
         throw new AssertionError();
-    }
-
-    @ExpectPlatform
-    public static void layerDefinition(ModelLayerLocation layer, Supplier<LayerDefinition> definition) {
-        throw new AssertionError();
-    }
-
-    public static <T extends Entity> void entity(Supplier<? extends EntityType<? extends T>> type, EntityRendererProvider<T> renderer, ModelLayerLocation layer, Supplier<LayerDefinition> definition) {
-        renderer(type, renderer);
-        layerDefinition(layer, definition);
     }
 
     @SafeVarargs @ExpectPlatform
